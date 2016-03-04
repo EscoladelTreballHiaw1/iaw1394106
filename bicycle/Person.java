@@ -4,7 +4,7 @@ package bicycle;
  *
  * Copyright 2010-2012 Mònica Ramírez Arceda <mramirez@escoladeltreball.org>
  *                     Joaquim Laplana Tarragona <jlaplana@escoladeltreball.org>
- *
+ * Mamadou
  * This is free software, licensed under the GNU General Public License v3.
  * See http://www.gnu.org/licenses/gpl.html for more information.
  */
