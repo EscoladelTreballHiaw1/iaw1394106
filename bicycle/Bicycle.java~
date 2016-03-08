@@ -205,14 +205,24 @@ public class Bicycle {
      * @return true if you can slow down or false
      */
     public boolean slowDown() {
-        if (frontSprocket > 1) {
-            if (rearSprocket < nRearSprockets) {
-                rearSprocket++;
-            }
-            frontSprocket--;
-            if (rearSprocket > 1)
-                rearSprocket--;
+        boolean done = false;
+        if (frontSprocket > 1 && rearSprocket < nRearSprockets) {
+            done = changeFrontSprocket(-1);
         }
-        return true;
+        
+        return done;
+    }
+    
+    /**
+     * speed up the speed 
+     * @return true if you can speed up or false
+     */
+    public boolean speedUp() {
+        boolean done = false;
+        if (frontSprocket < nFrontSprockets && rearSprocket < nRearSprockets) {
+            done = changeFrontSprocket(1);
+        }
+        
+        return done;
     }
 }

@@ -209,6 +209,9 @@ public class Bicycle {
         if (frontSprocket > 1 && rearSprocket < nRearSprockets) {
             done = changeFrontSprocket(-1);
         }
+        if (frontSprocket == 1) {
+            changeRearSprocket(1);
+        }
         
         return done;
     }
@@ -221,6 +224,9 @@ public class Bicycle {
         boolean done = false;
         if (frontSprocket < nFrontSprockets && rearSprocket < nRearSprockets) {
             done = changeFrontSprocket(1);
+        }
+        if (frontSprocket == nFrontSprockets) {
+            changeRearSprocket(-1);
         }
         
         return done;
